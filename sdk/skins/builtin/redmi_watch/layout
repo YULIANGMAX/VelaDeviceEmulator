@@ -1,0 +1,42 @@
+parts {
+  device {
+    display {
+      width 432
+      height 514
+      x 0
+      y 0
+      corner_radius 80
+    }
+  }
+  portrait {
+    background {
+      image background.png
+    }
+    foreground {
+      mask foreground.png
+    }
+  }
+}
+layouts {
+  portrait {
+    width 560
+    height 870
+    event EV_SW:0:1 
+    part1 {
+      name portrait
+      x 0
+      y 0
+    }
+    part2 {
+      name device
+      x 47
+      y 182
+    }
+  }
+}
+
+props {
+  shape rect
+  density 320
+  flavor watch
+}

@@ -1,0 +1,41 @@
+parts {
+  device {
+    display {
+      width 212
+      height 520
+      x 0
+      y 0
+      corner_radius 104
+    }
+  }
+  portrait {
+    background {
+      image background.png
+    }
+    foreground {
+      mask foreground.png
+    }
+  }
+}
+layouts {
+  portrait {
+    width 272
+    height 563
+    event EV_SW:0:1
+    part1 {
+      name portrait
+      x 0
+      y 0
+    }
+    part2 {
+      name device
+      x 30
+      y 22
+    }
+  }
+}
+props {
+  shape pill-shaped
+  density 320
+  flavor band
+}
